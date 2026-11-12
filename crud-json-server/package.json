@@ -1,0 +1,36 @@
+{
+  "name": "crud-json-server",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-scripts": "5.0.1",
+    "bootstrap": "4.6.2",
+    "json-server": "0.17.4",
+    "concurrently": "9.2.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "json-server": "json-server --watch db.json --port 5000 --host 127.0.0.1",
+    "dev": "concurrently --kill-others-on-fail \"npm start\" \"npm run json-server\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  }
+}
