@@ -1,4 +1,4 @@
-# Module 5 Week 3 Day 2 Demo
+# Module 5 Week 3 Day 2 — Demo and Homework
 
 Declan Wilde · WEB 403 Advanced Full Stack Web Development
 
@@ -32,4 +32,12 @@ To run them separately, use `npm start` in one terminal and `npm run json-server
 
 “The React app is the client and JSON Server is the local API. My Get Lists button sends a GET request to the posts endpoint. The response is converted to JSON and saved in alldata state, which updates the screen. I pass that array to Lists through props and use forEach to create a table row for each book. The loading state controls the message while the request is pending.”
 
-This demo implements the read step. The PDF says to continue the remaining CRUD features in the next homework. No GAP submission has been made.
+## Homework (second commit)
+
+Adds CreateList.js, UpdateList.js and DeleteList.js using React Bootstrap Modal and useState for visibility. BookFields.js shares the controlled title/author fields. App.js remains the class parent: handleChange stores form values in singledata, getList fetches the selected record, and createList/updateList/deleteList call POST/PUT/DELETE with fetch. JSON bodies use Content-Type application/json and JSON.stringify. After successful writes, getLists reloads the table. Delete fields are disabled as the slides require. Failed requests leave the dialog open with an error, and required fields prevent blank records.
+
+Bootstrap 5 and React Bootstrap 2 are paired for compatibility with the installed React version. The course's component split, class state, useState modal visibility and REST methods are preserved.
+
+Start with npm run dev as above. Click Get Lists, then Create or a row's Update/Delete button. Data persists in db.json. The database is local development data, not a hosted service. The four original book records are retained.
+
+No GAP submission has been made.
